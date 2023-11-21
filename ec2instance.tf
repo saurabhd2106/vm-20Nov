@@ -6,8 +6,10 @@ resource "aws_instance" "vm" {
 
   tags = {
 
-    "Name" = var.vm_name
+    "Name" = "test-${each.value}"
 
   }
+
+  for_each = toset(var.vm_name)
 
 }

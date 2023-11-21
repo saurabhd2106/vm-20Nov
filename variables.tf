@@ -16,7 +16,7 @@ variable "instance_type" {
 
 variable "vm_name" {
 
-    type = string
+    type = list(string)
   
 }
 
